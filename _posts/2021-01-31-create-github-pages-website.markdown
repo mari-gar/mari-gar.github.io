@@ -5,7 +5,7 @@ date:   2021-01-31
 categories: GitHub
 ---
 
-Setting up a website with Github Pages is absolutely daunting because of hundreds of guides out there (including this!) and so it is tempting to simply set it up using a few themes already available when you create your website [Setting up GitHub Pages](https://guides.github.com/features/pages/). However, you will soon find out that this can be a more complicated approach into building a website using GitHub Pages, very much like how I did some time ago.
+Setting up a website with Github Pages isn't necessarily user-friendly even with hundreds of guides out there (including this!) and so it is tempting to simply set it up using a few themes already available when you create your website [Setting up GitHub Pages](https://guides.github.com/features/pages/). However, you will soon find out that this can be a more complicated approach into building a website using GitHub Pages, very much like how I did some time ago.
 
 If you prefer to have everything set up for you, setting up Jekyll on your website is the best way to go although this method is not without its own set of challenges. Many guides have taken me right in the middle of how to build the website without considering that I know very minimal about how everything works. This guide is built for anyone who is like me - a resourceful beginner. 
 
