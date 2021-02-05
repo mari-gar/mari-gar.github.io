@@ -5,94 +5,96 @@ date:   2021-01-31
 categories: GitHub
 ---
 
-Setting up a website with Github Pages isn't necessarily user-friendly even with hundreds of guides out there (including this!) and so it is tempting to simply set it up using a few themes already available when you create your website for the first time: [Setting up GitHub Pages](https://guides.github.com/features/pages/). However, you will soon find out that this can be a more complicated approach into building a website using GitHub Pages, very much like how I did some time ago.
+Setting up a website with Github Pages isn't quite user-friendly even with hundreds of guides out there (including this!). It is tempting to simply set it up using a few themes already available when you create your website for the first time [using this guide to GitHub Pages](https://guides.github.com/features/pages/). However, you will soon find out that this can be a more complicated approach into building a website using GitHub Pages, which I can attest to by personal experience.
 
-If you prefer to have everything set up for you, setting up Jekyll on your website is the best way to go although this method is not without its own set of challenges. Many guides have taken me right in the middle of how to build the website without considering that I know very minimal about how everything works. This guide is built for anyone who is like me - a resourceful beginner. 
+I have pulled the following instructions from different resources and summarized them so that it's easy to follow for a beginner who knows nothing much about Git and using the command line.
 
-1. Install Git Bash. Follow this link for more info: [How to install Git][(http://blackwell.math.yorku.ca//tmp/happygit/happy-git-with-r/_book/install-git.html)
+In this method, you will generate a local repository (i.e., folder) for your website which you will push (i.e., upload) to your online repository for your website on GitHub.
 
-Git Bash is your terminal where you will put all your codes in.
+1. **Install Git Bash.** Follow this link for more info: [How to install Git](http://blackwell.math.yorku.ca//tmp/happygit/happy-git-with-r/_book/install-git.html)
 
-2. On Git Bash, connect to your Github account using your commit email. Doing this will enable you to push your local repository online, to your GitHub account. Make sure in your Email settings that your that you have unchecked the option for *Block command line pushes that expose my email.* For more info go to: [Private emails on GitHub](https://github.blog/2017-04-11-private-emails-now-more-private/).
+    Git Bash is your command line terminal where you will put all your codes in. You can only type one line of code at a time. In this guide, you will sometimes see codes with multiple lines. In reality, you type one line, hit enter, then type the second line and hit enter.
 
-Update `email@example.com` with the email you use for GitHub.
+2. **Connect to your GitHub account using Git Bash.** Doing this will enable you to push your local repository to your online repository that lives on GitHub. To make sure it connects, go to your [Email Settings](https://github.com/settings/emails) and uncheck *Block command line pushes that expose my email*.
 
-```
-$ git config --global user.email "email@example.com"
-```
+    Type the following code into Git Bash (or aka command line). Update `email@example.com` with the email you signed up with on GitHub.
 
-You will receive a notification to authorize this connection.
+    ```
+    $ git config --global user.email "email@example.com"
+    ```
 
-3. Set up your GitHub Pages site. Read more here: [Setting up GitHub Pages](https://docs.github.com/en/github/working-with-github-pages/creating-a-github-pages-site)
+    You will receive a notification to authorize this connection via your web browser. Follow the instructions to authorize this connection and move to the next step.
 
-4. Install Ruby. Follow this link for more info: [How to install Ruby](https://www.ruby-lang.org/en/documentation/installation/#rubyinstaller)
+3. **Set up your GitHub Pages site.** Follow the instructions here: [Setting up GitHub Pages](https://docs.github.com/en/github/working-with-github-pages/creating-a-github-pages-site)
 
-Ruby is required for using gems and gems are required to install Bundler and Jekyll.
+4. **Install Ruby.** Follow the instructions here to install Ruby: [How to install Ruby](https://www.ruby-lang.org/en/documentation/installation/#rubyinstaller)
 
-The following are combined instructions from [GitHub guide to Jekyll](https://docs.github.com/en/github/working-with-github-pages/creating-a-github-pages-site-with-jekyll) and [Jekyll's Guide to using Jekyll with Bundler](https://jekyllrb.com/tutorials/using-jekyll-with-bundler/)
+    Ruby is required for using gems (a type of command) and gems are required to install Bundler and Jekyll. Bundler makes it easy to get Jekyll up and running. And finally, Jekyll is the most convenient way to use website themes and other website functionalities. It creates the entire framework for the website for you.
+
+    The following are combined instructions from [GitHub guide to Jekyll](https://docs.github.com/en/github/working-with-github-pages/creating-a-github-pages-site-with-jekyll) and [Jekyll's Guide to using Jekyll with Bundler](https://jekyllrb.com/tutorials/using-jekyll-with-bundler/)
  
-5. Now we're ready to install Bundler. You can either install Bundler on your default root folder or you can create a new root folder for this (so it doesn't mess up with all your other files, etc.). If you want to make a root folder, follow the below:
+5. **Install Bundler.** You can either install Bundler on your default root folder or you can create a new root folder for this (so it doesn't mess up with all your other files, etc.). If you want to make a new root folder, use the following code on your command line:
 
-```
-$ mkdir ROOTFOLDER
-$ cd ROOTFOLDER
-$ gem install bundler
-```
+    ```
+    $ mkdir ROOTFOLDER
+    ```
 
-If you don't want to make a root folder, simply skip the first line above and start with the second line.
+    If you don't want to make a root folder, simply skip the above code and use the following to install Bundler.
 
-6. Create a gemfile in the same folder.
+    ```
+    $ cd ROOTFOLDER
+    $ gem install bundler
+    ```
 
-```
-$ bundle init
-```
+6. **Create a Gemfile in the same folder.** Use the code below to create a Gemfile.
 
-7. In the Gem file for Bundler, delete all existing content and replace it with the latest content as shown in the installation procedure in the [Bundler website](http://bundler.io). Save this file and exit.
+    ```
+    $ bundle init
+    ```
 
-8. Make a repository for your website (a folder for your website but in GitHub terms). This will create a folder with git file inside.
+    In the Gemfile for Bundler, delete all existing content and replace it with the latest content as shown in the installation procedure in the [Bundler website](http://bundler.io). Save the file and exit.
 
-```
-$ git init WEBSITEFOLDER
-```
+7. **Make a repository for your website.** To create a repository (i.e., folder), replace `WEBSITEFOLDER` in the code below with the name of your repository on GitHub. Then change the directory folder to `WEBSITEFOLDER`. 
 
-Change the directory folder to `WEBSITEFOLDER`. The branch for this folder is set to `(master)` folder by default. A branch is a version of the master. You can only use one active branch for the website at a time. 
+    ```
+    $ git init WEBSITEFOLDER
+    $ cd WEBSITEFOLDER
+    ```
 
-```
-$ cd WEBSITEFOLDER
-```
+   The branch for this repository is set to `(master)` by default. A branch is a version of the master. You can only use one active branch for the website at a time. You may add or change the branch you use according to the instructions on [#6 at GitHub guide to Jekyll](https://docs.github.com/en/github/working-with-github-pages/creating-a-github-pages-site-with-jekyll)
 
-The following sets up Jekyll using Bundler. You can find more explanation for this in [Jekyll's tutorial on using Bundler](https://jekyllrb.com/tutorials/using-jekyll-with-bundler/).
+9. **Set up Jekyll using Bundler.** Use the codes below. You can find more explanation for this in [Jekyll's tutorial on using Bundler](https://jekyllrb.com/tutorials/using-jekyll-with-bundler/).
 
-```
-$ bundle config set --local path 'vendor/bundle'
-$ bundle add jekyll
-$ bundle exec jekyll new --force --skip-bundle . 
-$ bundle install
-```
+    ```
+    $ bundle config set --local path 'vendor/bundle'
+    $ bundle add jekyll
+    $ bundle exec jekyll new --force --skip-bundle . 
+    $ bundle install
+    ```
 
-9. Open the Gemfile inside the `WEBSITEFOLDER` and replace `VERSION` with the actual number for the latest Github Pages version:
+10. **Update GitHub Pages version in your Gemfile.** Open the Gemfile inside the `WEBSITEFOLDER` and replace `VERSION` with the actual number for the latest Github Pages [dependency version](https://pages.github.com/versions/):
 
-```
-$ gem "github-pages", "~> VERSION", group: :jekyll_plugins
-```
+    ```
+    $ gem "github-pages", "~> VERSION", group: :jekyll_plugins
+    ```
 
-10. To see how your website looks like run the following code to make the site active on a local URL: http://127.0.0.1:4000
+11. **View your website!** To see how your website looks like run the following code to make the site active on a local URL: http://127.0.0.1:4000
 
-```
-$ bundle exec jekyll serve
-```
+    ```
+    $ bundle exec jekyll serve
+    ```
 
-11. Now, time to connect it to your account. Add `WEBSITEFOLDER` to your GitHub URL by replacing `USERNAME` with your GitHub username.
+11. **Connect your local repository to your online repository.** Replace `USERNAME` with your GitHub username on the code below.
 
-```
-$ git remote add origin https://github.com/USERNAME/USERNAME.github.io.git
-```
+    ```
+    $ git remote add origin https://github.com/USERNAME/USERNAME.github.io.git
+    ```
 
-12. Push the repository to Github. In this case, the default branch name is `master`.
+12. **Push the repository to GitHub.** In this case, the default branch name is `master`.
 
-```
-$ git push -u origin BRANCH
-```
+    ```
+    $ git push -u origin BRANCH
+    ```
 
 If your website is set to public, you should see your website live and online!
 
@@ -101,21 +103,24 @@ If you have any problems regarding installation, Google and Stack Overflow are y
 
 ### Creating and Updating your website
 
-Pages are created in markdown file format or `.md`. [This guide](https://guides.github.com/features/mastering-markdown/) on markdown pretty much sums up everything you need to know to format your post.
+Pages and posts are text files you can create using your Notepad but are saved as a `.markdown` or `.md` file format. You can learn how to format using markdown using [this guide](https://guides.github.com/features/mastering-markdown/). 
 
-You can create a post in three ways. First, you can [create it within GitHub using this guide](https://docs.github.com/en/github/working-with-github-pages/adding-content-to-your-github-pages-site-using-jekyll). Second, you can create the markdown file locally and upload it on GitHub. Lastly you can push the locally create markdown file to GitHub via the command line (Git Bash), go to [this GitHub guide on adding a file to your repository](https://docs.github.com/en/github/managing-files-in-a-repository/adding-a-file-to-a-repository-using-the-command-line).
+Follow [this guide for to make a blog post](https://jekyllrb.com/docs/posts/) and [this guide to create a web page](https://docs.github.com/en/github/working-with-github-pages/adding-content-to-your-github-pages-site-using-jekyll).
+
+You can create a post in three ways: 
+**First**, you can [create it within GitHub using this guide](https://docs.github.com/en/github/working-with-github-pages/adding-content-to-your-github-pages-site-using-jekyll). 
+
+**Second**, you can create the markdown file locally and and [upload it on GitHub.](https://github.blog/2016-02-18-upload-files-to-your-repositories/)
+
+**Lastly**, you can [push the locally created markdown file to GitHub via the command line.](https://docs.github.com/en/github/managing-files-in-a-repository/adding-a-file-to-a-repository-using-the-command-line).
 
 To use the command line, replace `FOLDER/FILE.md` with the path to the file you want to push. Replace `COMMENT` with your comment about the file. This is necessary to complete the `git commit` step. Lastly, replace `BRANCH` with the branch where you saved your website as. In this case, it is `master`.
 
-```
-$ git add FOLDER/FILE.md
-$ git commit -m "COMMENT"
-$ git push origin BRANCH
-```
+    ```
+    $ cd WEBSITEFOLDER
+    $ git add FOLDER/FILE.md
+    $ git commit -m "COMMENT"
+    $ git push origin BRANCH
+    ```
 
-Check if update is successful:
-
-```
-$ git status
-```
-
+If no error comes up, then your update is successful! 
