@@ -5,19 +5,21 @@ date:   2021-01-31
 categories: GitHub
 ---
 
-Setting up a website with Github Pages isn't quite user-friendly even with hundreds of guides out there (including this!). It is tempting to simply set it up using a few themes already available when you create your website for the first time [using this guide to GitHub Pages](https://guides.github.com/features/pages/). However, you will soon find out that this can be a more complicated approach into building a website using GitHub Pages, which I can attest to by personal experience.
+*Special Note: This guide is made by a beginner for beginners. If you come across any type of error, my best advice is to go to [Stack Overflow for help.](https://stackoverflow.com/questions/tagged/github-pages)* 
 
-I have pulled the following instructions from different resources and summarized them so that it's easy to follow for a beginner who knows nothing much about Git and using the command line.
+Setting up a website with Github Pages isn't quite user-friendly even with hundreds of guides out there. It is tempting to simply set it up using a few themes already available when you create your website for the first time [using this guide to GitHub Pages](https://guides.github.com/features/pages/). However, you will soon find out that this can be a more complicated approach into building a website on GitHub, which I can attest to by personal experience.
 
-In this method, you will generate a local repository (i.e., folder) for your website which you will push (i.e., upload) to your online repository for your website on GitHub.
+I have pulled the following instructions from different sources and summarized them so that it's easy to follow for a beginner like me who has zero knowledge but quite resourceful. Simply enter the codes in the same order and replace terms whenever it is required. 
+
+In this method, you will generate a local repository (i.e., folder) for your website which you will push (i.e., upload) to an online repository for your website on GitHub.
 
 1. **Install Git Bash.** Follow this link for more info: [How to install Git](http://blackwell.math.yorku.ca//tmp/happygit/happy-git-with-r/_book/install-git.html)
 
     Git Bash is your command line terminal where you will put all your codes in. You can only type one line of code at a time. In this guide, you will sometimes see codes with multiple lines. In reality, you type one line, hit enter, then type the second line and hit enter.
 
-2. **Connect to your GitHub account using Git Bash.** Doing this will enable you to push your local repository to your online repository that lives on GitHub. To make sure it connects, go to your [Email Settings](https://github.com/settings/emails) and uncheck *Block command line pushes that expose my email*.
+2. **Connect to your GitHub account using Git Bash.** Doing this will enable you to push your local repository online on GitHub. 
 
-    Type the following code into Git Bash (or aka command line). Update `email@example.com` with the email you signed up with on GitHub.
+    Type the following code into Git Bash (or aka command line). Update `email@example.com` with either your (1) GitHub-provided private email, or (2) the email you used to register for a GitHub account. Your private email can be found in your [Email Settings](https://github.com/settings/emails) which is in the format `ID+username@users.noreply.github.com`. If you want to use your actual email, you must uncheck *Block command line pushes that expose my email* in the [Email Settings](https://github.com/settings/emails). You can read more about [emails on GitHub here.](https://docs.github.com/en/github/setting-up-and-managing-your-github-user-account/setting-your-commit-email-address)
 
     ```
     $ git config --global user.email "email@example.com"
@@ -97,8 +99,6 @@ In this method, you will generate a local repository (i.e., folder) for your web
     ```
 
 If your website is set to public, you should see your website live and online!
-
-If you have any problems regarding installation, Google and Stack Overflow are your best friends :)
  
 
 ### Creating and Updating your website
