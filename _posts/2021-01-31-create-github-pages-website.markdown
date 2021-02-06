@@ -5,7 +5,7 @@ date:   2021-01-31
 categories: GitHub
 ---
 
-*Special Note: This guide is made by a beginner for beginners. If you come across any type of error, my best advice is to go to [Stack Overflow for help.](https://stackoverflow.com/questions/tagged/github-pages)* 
+*Special Note: This guide is made by a beginner for beginners. If there is any misinformation in my guide, please let me know! If you come across any issue during the process and would like to find a fix, my best advice is to go to [Stack Overflow for help.](https://stackoverflow.com/questions/tagged/github-pages)* 
 
 Setting up a website with Github Pages isn't quite user-friendly even with hundreds of guides out there. It is tempting to simply set it up using a few themes already available when you create your website for the first time [using this guide to GitHub Pages](https://guides.github.com/features/pages/). However, you will soon find out that this can be a more complicated approach into building a website on GitHub, which I can attest to by personal experience.
 
