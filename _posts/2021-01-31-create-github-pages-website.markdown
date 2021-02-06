@@ -29,22 +29,15 @@ In this method, you will generate a local repository (i.e., folder) for your web
 
 3. **Set up your GitHub Pages site.** Follow the instructions here: [Setting up GitHub Pages](https://docs.github.com/en/github/working-with-github-pages/creating-a-github-pages-site)
 
-4. **Install Ruby.** Follow the instructions here to install Ruby: [How to install Ruby](https://www.ruby-lang.org/en/documentation/installation/#rubyinstaller)
+4. **Install Ruby.** Follow the [instructions here to install Ruby](https://www.ruby-lang.org/en/documentation/installation/)
 
     Ruby is required for using gems (a type of command) and gems are required to install Bundler and Jekyll. Bundler makes it easy to get Jekyll up and running. And finally, Jekyll is the most convenient way to use website themes and other website functionalities. It creates the entire framework for the website for you.
 
     The following are combined instructions from [GitHub guide to Jekyll](https://docs.github.com/en/github/working-with-github-pages/creating-a-github-pages-site-with-jekyll) and [Jekyll's Guide to using Jekyll with Bundler](https://jekyllrb.com/tutorials/using-jekyll-with-bundler/)
  
-5. **Install Bundler.** You can either install Bundler on your default root folder or you can create a new root folder for this (so it doesn't mess up with all your other files, etc.). If you want to make a new root folder, use the following code on your command line:
+5. **Install Bundler.** Use the following to install Bundler.
 
     ```
-    $ mkdir ROOTFOLDER
-    ```
-
-    If you don't want to make a root folder, simply skip the above code and use the following to install Bundler.
-
-    ```
-    $ cd ROOTFOLDER
     $ gem install bundler
     ```
 
@@ -56,14 +49,18 @@ In this method, you will generate a local repository (i.e., folder) for your web
 
     In the Gemfile for Bundler, delete all existing content and replace it with the latest content as shown in the installation procedure in the [Bundler website](http://bundler.io). Save the file and exit.
 
-7. **Make a repository for your website.** To create a repository (i.e., folder), replace `WEBSITEFOLDER` in the code below with the name of your repository on GitHub. Then change the directory folder to `WEBSITEFOLDER`. 
+7. **Make a repository for your website.** You can either create a repository folder in your default directory or under a new root folder. I highly suggest creating a new root folder since more files will be generated later on and it can be quite messy. Replace `ROOT` with the name for your new root folder. Then replace `WEBSITE` with the name of your website's repository on GitHub. Then change the directory folder to `WEBSITEFOLDER`. 
 
     ```
+    $ mkdir ROOT
+    $ cd ROOT
     $ git init WEBSITEFOLDER
     $ cd WEBSITEFOLDER
     ```
 
-   The branch for this repository is set to `(master)` by default. A branch is a version of the master. You can only use one active branch for the website at a time. You may add or change the branch you use according to the instructions on [#6 at GitHub guide to Jekyll](https://docs.github.com/en/github/working-with-github-pages/creating-a-github-pages-site-with-jekyll)
+    Now, all your website files will be saved under `ROOT/WEBSITEFOLDER/` in your local drive.
+    
+    The branch for this repository is set to `(master)` by default. A branch is a version of the master. You can only use one active branch for the website at a time. You may add or change the branch you use according to the instructions on [#6 at GitHub guide to Jekyll](https://docs.github.com/en/github/working-with-github-pages/creating-a-github-pages-site-with-jekyll)
 
 9. **Set up Jekyll using Bundler.** Use the codes below. You can find more explanation for this in [Jekyll's tutorial on using Bundler](https://jekyllrb.com/tutorials/using-jekyll-with-bundler/).
 
@@ -80,7 +77,7 @@ In this method, you will generate a local repository (i.e., folder) for your web
     $ gem "github-pages", "~> VERSION", group: :jekyll_plugins
     ```
 
-11. **View your website!** To see how your website looks like run the following code to make the site active on a local URL: http://127.0.0.1:4000
+11. **View your website!** To see how your website looks like run the following code to make the site active on a local URL: (http://127.0.0.1:4000)
 
     ```
     $ bundle exec jekyll serve
@@ -114,7 +111,7 @@ You can create a post in three ways:
 
 **Lastly**, you can [push the locally created markdown file to GitHub via the command line.](https://docs.github.com/en/github/managing-files-in-a-repository/adding-a-file-to-a-repository-using-the-command-line).
 
-To use the command line, replace `FOLDER/FILE.md` with the path to the file you want to push. Replace `COMMENT` with your comment about the file. This is necessary to complete the `git commit` step. Lastly, replace `BRANCH` with the branch where you saved your website as. In this case, it is `master`.
+To use the command line, makes sure that the files you are uploading are closed and your directory is set to your local repository for your website. Replace `WEBSITEFOLDER` with your repository folder's name and replace `FOLDER/FILE.md` with the path to the file you want to push. Replace `COMMENT` with your comment about the file. This is necessary to complete the `git commit` step. Lastly, replace `BRANCH` with the branch where you saved your website as. In this case, it is `master`.
 
     ```
     $ cd WEBSITEFOLDER
