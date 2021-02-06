@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How to create a GitHub pages website"
+title:  "How to create a GitHub Pages site"
 date:   2021-01-31
 categories: GitHub
 ---
