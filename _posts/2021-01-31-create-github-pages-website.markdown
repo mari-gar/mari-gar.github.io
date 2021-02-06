@@ -113,11 +113,11 @@ You can create a post in three ways:
 
 To use the command line, makes sure that the files you are uploading are closed and your directory is set to your local repository for your website. Replace `WEBSITEFOLDER` with your repository folder's name and replace `FOLDER/FILE.md` with the path to the file you want to push. Replace `COMMENT` with your comment about the file. This is necessary to complete the `git commit` step. Lastly, replace `BRANCH` with the branch where you saved your website as. In this case, it is `master`.
 
-    ```
-    $ cd WEBSITEFOLDER
-    $ git add FOLDER/FILE.md
-    $ git commit -m "COMMENT"
-    $ git push origin BRANCH
-    ```
+```
+$ cd WEBSITEFOLDER
+$ git add FOLDER/FILE.md
+$ git commit -m "COMMENT"
+$ git push origin BRANCH
+ ```
 
 If no error comes up, then your update is successful! 
